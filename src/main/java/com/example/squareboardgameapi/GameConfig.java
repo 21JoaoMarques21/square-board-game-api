@@ -4,7 +4,7 @@ import fr.le_campus_numerique.square_games.engine.GameFactory;
 import fr.le_campus_numerique.square_games.engine.tictactoe.*;
 import fr.le_campus_numerique.square_games.engine.connectfour.*;
 import fr.le_campus_numerique.square_games.engine.taquin.*;
-import java.util.ServiceLoader;
+//import java.util.ServiceLoader;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

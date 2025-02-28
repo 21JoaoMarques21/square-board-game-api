@@ -1,8 +1,12 @@
 package com.example.squareboardgameapi;
 
 public class UserCreationParams {
-    private String email;
+    private final String email;
     private String password;
+
+    public UserCreationParams(String email) {
+        this.email = email;
+    }
 
     // Getters and Setters
     public String getEmail() {

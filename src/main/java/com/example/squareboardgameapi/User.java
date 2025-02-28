@@ -3,8 +3,8 @@ package com.example.squareboardgameapi;
 import java.util.UUID;
 
 public class User {
-    private UUID userId;  // Change Long to UUID
-    private String email;
+    private final UUID userId;  // Change Long to UUID
+    private final String email;
     private String password;
 
     // Constructor for existing users

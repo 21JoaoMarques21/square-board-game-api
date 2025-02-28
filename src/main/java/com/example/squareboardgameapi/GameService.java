@@ -2,6 +2,7 @@ package com.example.squareboardgameapi;
 
 import fr.le_campus_numerique.square_games.engine.Game;
 import fr.le_campus_numerique.square_games.engine.GameFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -11,7 +12,7 @@ import java.util.UUID;
 public class GameService {
     private final GameFactory gameFactory;
 
-    public GameService(GameFactory gameFactory) {
+    public GameService(@Qualifier("connect4Factory") GameFactory gameFactory) {
         this.gameFactory = gameFactory;
     }
 

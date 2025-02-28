@@ -17,6 +17,6 @@ public class GameCatalogImpl implements GameCatalog {
     @Override
     public Collection<String> getGameIdentifiers() {
         // Currently, only Tic Tac Toe is available
-        return Collections.singletonList(ticTacToeGameFactory.getGameIdentifier());
+        return Collections.singletonList(ticTacToeGameFactory.getGameFactoryId());
     }
 }
