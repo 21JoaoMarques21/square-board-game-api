@@ -2,10 +2,9 @@ package com.example.squareboardgameapi;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import java.util.List;
+
 import java.util.Optional;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @Repository
 public class JpaUserDao implements UserDao {
@@ -28,13 +27,6 @@ public class JpaUserDao implements UserDao {
     public User findById(UUID userId) { // Ensure UUID is used
         Optional<UserEntity> userEntity = userEntityRepository.findById(userId);
         return userEntity.map(this::convertToUser).orElse(null);
-    }
-
-    @Override
-    public List<User> findAll() {
-        return userEntityRepository.findAll().stream()
-                .map(this::convertToUser)
-                .collect(Collectors.toList());
     }
 
     private UserEntity convertToUserEntity(User user) {

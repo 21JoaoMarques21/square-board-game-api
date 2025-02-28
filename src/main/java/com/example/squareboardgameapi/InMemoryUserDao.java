@@ -19,8 +19,4 @@ public class InMemoryUserDao implements UserDao {
         return userDatabase.get(userId);  // Retrieve the user by their ID
     }
 
-    @Override
-    public List<User> findAll() {
-        return new ArrayList<>(userDatabase.values());  // Return a list of all users
-    }
 }

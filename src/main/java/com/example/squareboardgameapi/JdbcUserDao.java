@@ -6,7 +6,6 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -49,8 +48,4 @@ public abstract class JdbcUserDao implements UserDao {
         return jdbcTemplate.queryForObject(sql, params, new BeanPropertyRowMapper<>(User.class));
     }
 
-    @Override
-    public List<User> findAll() {
-        return List.of();
-    }
 }
